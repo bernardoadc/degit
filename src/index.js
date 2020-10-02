@@ -70,7 +70,9 @@ class Degit extends EventEmitter {
 					process.exit(1);
 				});
 			},
-			remove: this.remove.bind(this)
+      remove: this.remove.bind(this),
+      bootstrap:  async (dir, dest, action) => {
+      }
 		};
 	}
 

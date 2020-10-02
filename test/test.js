@@ -206,7 +206,18 @@ describe('degit', function() {
 				'subdir/file.txt': 'hello from a subdirectory!'
 			});
 		});
-	});
+
+		it('clones repo and bootstraps it with specified scripts', async () => {
+			await exec(
+				`node ${degitPath} -v bernardoadc/degit-test-repo-bootstrap .tmp/test-repo`
+			);
+			compare(`.tmp/test-repo`, {
+				'other.txt': 'hello from github!',
+				subdir: null,
+				'subdir/file.txt': 'hello from a subdirectory!'
+			});
+		});
+  });
 
 	describe('git mode', () => {
 		it('is able to clone correctly using git mode', async () => {

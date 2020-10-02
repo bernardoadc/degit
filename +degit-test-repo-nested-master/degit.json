@@ -1,0 +1,6 @@
+[
+  {
+    "action": "clone",
+    "src": "Rich-Harris/degit-test-repo"
+  }
+]
